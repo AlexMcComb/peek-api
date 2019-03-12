@@ -5,7 +5,7 @@ services:
 deploy:
   provider: heroku
   api_key:
-    secure: 180a6bf7-33ab-48f8-a503-31a3fe37d131
-  app: frozen-meadow-96290
+    secure: gQp1ld3C/cd8KHONskK9eUTzL/aMJf7wRGlvVC0jrAxRbfrcq8IKvI+q+yw5JiEOpDenQdJiPp9+Jg5+KngC/BGq6NbhCKBYZQIZsc4b40xbJL3FZ6axALL83r3wLtnfrwsa5KR2+q7jV9RIDlD2fc5BBjonH5WQ77GfDFhS542WbBIeJ0YPCUC+jknDhgIoqGIffhloqQHeVfBtDbz7ixoIeW9VMX92My6bGfN1dV2aRkwfOcx8qmWEO+0rMdx+APpMYbQTKm9BoWgLBXSQ0Vu5R23+hNifx8ZiKyHXYQKTs7vKa1HNP7dQOb9FtqsjRhf7ENz45gfcaF9UhwaT/2aP8MgNWrFUJNBDziEG84nJ+mPehzZZzG+SM6/exCPOd9jjbdbwb0vnU75eix63dmES3EfqKA0ktFYICrUjNIos3uJmhVxDevtLtoUOD6VUUuqvrCtwxPLwJ50yAm+ednuPnvl23U6eV1FfLw4f/t8GHTgONRH0WOimKLsnnY/kxBeiIG4V7zpTWvpHc0CPgAk62FWjUzRyIhyfXB9dW2ghBSs/YdRnxU1RqvJHMK5eIgW8w7wfVaHUhY1ZqiLyHoNBXvgSW/3+bpd15uGziPeCy16j2GoWWXgrBOc5Mo/RTdjWyRXFvTv87KmkiwIdV0UW7+k64LcSXCE8H+dTyuk=
+  app: glacial-journey-35789
   on:
     repo: AlexMcComb/peek-api
