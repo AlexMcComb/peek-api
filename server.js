@@ -37,8 +37,6 @@ app.use(
   })
 );
 
-app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
-
 passport.use(localStrategy);
 passport.use(jwtStrategy);
 
