@@ -6,7 +6,6 @@ const morgan = require("morgan");
 const passport = require("passport");
 const cors = require("cors");
 
-const favicon = require("serve-favicon");
 const path = require("path");
 
 const { router: usersRouter } = require("./users");
