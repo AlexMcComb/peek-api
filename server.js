@@ -5,8 +5,7 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 const passport = require("passport");
 const cors = require("cors");
-
-const path = require("path");
+const bodyParser = require("body-parser");
 
 const { router: usersRouter } = require("./users");
 const { router: authRouter, localStrategy, jwtStrategy } = require("./auth");
@@ -17,8 +16,14 @@ const { PORT, DATABASE_URL, CLIENT_ORIGIN } = require("./config");
 
 const app = express();
 
+app.use(express.static("public"));
+
 // Logging
 app.use(morgan("common"));
+
+app.use(bodyParser.json());
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // CORS
 app.use(function(req, res, next) {
@@ -31,14 +36,14 @@ app.use(function(req, res, next) {
   next();
 });
 
+passport.use(localStrategy);
+passport.use(jwtStrategy);
+
 app.use(
   cors({
     origin: CLIENT_ORIGIN
   })
 );
-
-passport.use(localStrategy);
-passport.use(jwtStrategy);
 
 app.use("/api/users/", usersRouter);
 app.use("/api/auth/", authRouter);
@@ -98,5 +103,3 @@ if (require.main === module) {
 }
 
 module.exports = { app, runServer, closeServer };
-
-// test
