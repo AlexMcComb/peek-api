@@ -6,5 +6,6 @@ exports.TEST_DATABASE_URL =
 exports.PORT = process.env.PORT || 8080;
 exports.JWT_SECRET = process.env.JWT_SECRET || "test";
 exports.JWT_EXPIRY = process.env.JWT_EXPIRY || "7d";
-exports.CLIENT_ORIGIN = process.env.CLIENT_ORIGIN || "http://localhost:3000";
+exports.CLIENT_ORIGIN =
+  process.env.CLIENT_ORIGIN || "https://limitless-ravine-87025.herokuapp.com/";
 //test
