@@ -12,7 +12,7 @@ const { router: authRouter, localStrategy, jwtStrategy } = require("./auth");
 
 mongoose.Promise = global.Promise;
 
-const { PORT, DATABASE_URL, CLIENT_ORIGIN } = require("./config");
+const { PORT, DATABASE_URL } = require("./config");
 
 const app = express();
 
@@ -30,7 +30,7 @@ passport.use(jwtStrategy);
 
 app.use(
   cors({
-    origin: CLIENT_ORIGIN
+    origin: "https://limitless-ravine-87025.herokuapp.com/"
   })
 );
 
