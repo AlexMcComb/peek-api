@@ -28,11 +28,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 passport.use(localStrategy);
 passport.use(jwtStrategy);
 
-app.use(
-  cors({
-    origin: "https://limitless-ravine-87025.herokuapp.com/"
-  })
-);
+app.use(cors());
 
 app.use("/api/users/", usersRouter);
 app.use("/api/auth/", authRouter);
